@@ -1,0 +1,35 @@
+**************************************************I.THE APPROACH*********************************
+1. CHOOSING THE ALGORITHM-
+a) The problem clearly is of BINARY CLASSIFICATION, so algorithms suitable for it are expected to produce the best results. 
+
+b) The dataset is very large, so algorithms which are less prone to overfitting are preferred more.(if this cannot be tackled, then techniques like regularization etc. have been implemented).
+
+c) A few consecutive features appear connected each other, so algorithm which is capable of handling features linked to each other should be focused on more.
+
+
+2. Possible Feature Engineering-
+
+THe feature values ranged from 0-1 for 1 feature and between 1-99 for some. Hence min max scaling was applied to confine the features in the range 0-1 for the algorithm to clearly interpret all the features as same type of distributions. But the output in output.csv inverted with a bad output rate( 0.94978  from 0.95278), so was abandoned. 
+
+On applying l2 regularisation on both trining and test data, it reduced to 0.93053. l1 didnt make any difference.
+On applying l2 regularisation on test data only, the outputs inverted hence this also dumped.
+
+
+**Techniques like mean normalization can be considered as an option for scaling the features to the same scale as this way the classification algorithm would give equal importance to all the features provided, thus a lesser biased result and more accurate prediction.**
+
+**********************************************************************************
+
+II. IMPLEMENTATION.
+1.Taking the above situations and after trying out various algorithms, Boosting algorithms were decided to rely upon out of which, XGBoost gave the best result with a classification accuracy of 95.258% accuracy, whereas Adaboost classifier gave and accuracy approximately 95.1% .
+
+2.Since for increasing the prediction accuracy 2 methods( feature engineering & boosting) are used and after getting a good accuracy rate, no feature engineering was deemed necessary.
+ 
+
+III. Tools used:-
+Sublime text and Scikit-learn library(with an external installation of xgboost on the system).
+
+THanks for reading!
+
+Note:- contact me at adityamohanjuit@gmail.com for any explanation, doubt or advice regarding the above. Thanks.
+
+
